@@ -1,0 +1,44 @@
+[build-system]
+requires = []
+build-backend = "build_backend"
+backend-path = ["."]
+
+[project]
+name = "global-namecase-engine"
+version = "0.2.0"
+description = "Deterministic, configurable human-name casing for Python applications."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = [
+    "name casing",
+    "name normalization",
+    "identity",
+    "etl",
+    "django",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.optional-dependencies]
+django = ["Django>=4.2"]
+dev = [
+    "build>=1.2",
+    "pytest>=8.0",
+    "twine>=5.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
